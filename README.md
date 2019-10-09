@@ -1,5 +1,4 @@
-# CSE177
-DataBase System Implementations
+# CSE177 DataBase System Implementations
 
 Description of project can be read in the project.pdf file.
 
