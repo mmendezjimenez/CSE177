@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <list>
 #include "RelOp.h"
 
 using namespace std;
@@ -186,6 +187,9 @@ RelationalOp* Join::getRightRelationalOp() {
 Join::~Join() {
 
 }
+
+
+
 ostream& Join::print(ostream& _os) {
 	return _os << "JOIN: SCHEMA LEFT: " << schemaLeft << " SCHEMA RIGHT: " << schemaRight << " SCHEMA OUT:" << schemaOut << endl;
 }
@@ -320,6 +324,9 @@ GroupBy::GroupBy(Schema& _schemaIn, Schema& _schemaOut, OrderMaker& _groupingAtt
 GroupBy::~GroupBy() {
 
 }
+
+
+
 Schema& GroupBy::getSchemaIn() {
 	return schemaIn;
 }

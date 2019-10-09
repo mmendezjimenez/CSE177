@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <map>
-//#include <unordered_map>
 #include <unordered_set>
 
 #include "Schema.h"
@@ -143,6 +142,8 @@ private:
 	// selection predicate in conjunctive normal form
 	CNF predicate;
 
+
+
 	// operators generating data
 	RelationalOp* left;
 	RelationalOp* right;
@@ -160,7 +161,8 @@ public:
 	RelationalOp* getLeftRelationalOp();
 	RelationalOp* getRightRelationalOp();
 
-	virtual bool GetNext(Record& _record) {}
+	virtual bool GetNext(Record& _record);
+	virtual bool NestedLoopJoin(Record& _record);
 
 	virtual ostream& print(ostream& _os);
 };
